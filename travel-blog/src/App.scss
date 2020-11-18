@@ -45,6 +45,10 @@ a {
   background-color: $primary-light;
   padding-top: 10px;
   padding-bottom: 10px;
+  @media (max-width: $small-breakpoint) {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
 
   .header__inner {
     display: flex;
@@ -61,11 +65,18 @@ a {
         padding: 0;
         font-size: 34px;
         font-weight: 400;
+
+        @media (max-width: $small-breakpoint) {
+          font-size: 19px;
+        }
       }
 
       sub {
         font-size: 16px;
         font-style: italic;
+        @media (max-width: $small-breakpoint) {
+          font-size: 10px;
+        }
       }
     }
 
@@ -73,6 +84,11 @@ a {
       a {
         padding: 9px 16px;
         border-radius: 3px;
+
+        @media (max-width: $small-breakpoint) {
+          font-size: 11px;
+          padding: 3px 6px;
+        }
 
         &:hover,
         &:focus,
@@ -89,6 +105,10 @@ a {
   height: 570px;
   background-position: center;
   background-size: cover;
+
+  @media (max-width: $small-breakpoint) {
+    height: 300px;
+  }
 }
 
 .aboutme {
@@ -97,20 +117,50 @@ a {
   padding-top: 50px;
   padding-bottom: 50px;
 
+  @media (max-width: $small-breakpoint) {
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   .left {
+    @media (max-width: $small-breakpoint) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .headshot_image {
       border-radius: 50%;
       width: $profile-image-width;
+
+      @media (max-width: $small-breakpoint) {
+        width: $profile-image-width / 4;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
     }
   }
   
   .right {
     padding-left: 30px;
+    @media (max-width: $small-breakpoint) {
+      padding-left: initial;
+    }
 
     h2 {
       font-size: 32px;
       margin-top: 0;
       margin-bottom: 12px;
+      @media (max-width: $small-breakpoint) {
+        text-align: center;
+        font-size: 28px;
+      }
+    }
+
+    p {
+      @media (max-width: $small-breakpoint) {
+        font-size: 11px;
+      }
     }
   }
 }
@@ -119,6 +169,9 @@ a {
   background-color: $primary;
   padding-top: 16px;
   padding-bottom: 16px;
+  @media (max-width: $small-breakpoint) {
+    font-size: 10px;
+  }
   
   .footer__inner {
     display: flex;
