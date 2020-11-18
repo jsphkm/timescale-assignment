@@ -6,10 +6,10 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <div className="header__inner">
+        <div className="header__inner section">
           <div className="left">
-            <div>Travelize</div>
-            <div>My traveling experiences</div>
+            <h2>Travelize</h2>
+            <sub>My traveling experiences</sub>
           </div>
           <div className="right">
             <a href="/">Home</a>
@@ -19,8 +19,8 @@ function App() {
         </div>
       </header>
       <main className="main">
-        <div className="hero" style={{ backgroundImage: `url(${heroBackground})` }} />
-        <div className="aboutme_section">
+        <div className="hero section-hero" style={{ backgroundImage: `url(${heroBackground})` }} />
+        <div className="aboutme section">
           <div className="left">
             <img className="headshot_image" src={headshot} alt="headshot" />
           </div>
@@ -50,12 +50,14 @@ function App() {
         </div>
       </main>
       <footer className="footer">
-        <div className="left">
-          &copy; 2020 Travelize
-        </div>
-        <div className="right">
-          <a href="/">Privacy Policy</a>
-          <a href="/">Terms and conditions</a>
+        <div className="footer__inner section">
+          <div className="left">
+            &copy; 2020 Travelize
+          </div>
+          <div className="right">
+            <a href="/">Privacy Policy</a>
+            <a href="/">Terms and conditions</a>
+          </div>
         </div>
       </footer>
     </div>
