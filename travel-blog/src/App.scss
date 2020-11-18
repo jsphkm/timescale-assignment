@@ -16,5 +16,122 @@ $medium-breakpoint: 960px;
   * {
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
+    color: $gray;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $gray;
+}
+
+.section {
+  max-width: $site-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.section-hero {
+  max-width: $hero-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.header {
+  background-color: $primary-light;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .header__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 34px;
+        font-weight: 400;
+      }
+
+      sub {
+        font-size: 16px;
+        font-style: italic;
+      }
+    }
+
+    .right {
+      a {
+        padding: 9px 16px;
+        border-radius: 3px;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $primary;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  height: 570px;
+  background-position: center;
+  background-size: cover;
+}
+
+.aboutme {
+  display: grid;
+  grid-template-columns: 1fr 2.6fr;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .left {
+    .headshot_image {
+      border-radius: 50%;
+      width: $profile-image-width;
+    }
+  }
+  
+  .right {
+    padding-left: 30px;
+
+    h2 {
+      font-size: 32px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.footer {
+  background-color: $primary;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  
+  .footer__inner {
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      color: white;
+    }
+    .right {
+      a {
+        color: white;
+        margin-left: 10px;
+      }
+    }
   }
 }
