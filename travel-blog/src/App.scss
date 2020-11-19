@@ -43,11 +43,15 @@ a {
 
 .header {
   background-color: $primary-light;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  @media (max-width: $small-breakpoint) {
-    padding-top: 6px;
-    padding-bottom: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  @media (min-width: $small-breakpoint) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  @media (min-width: $medium-breakpoint) {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .header__inner {
@@ -63,31 +67,41 @@ a {
       h2 {
         margin: 0;
         padding: 0;
-        font-size: 34px;
+        font-size: 19px;
         font-weight: 400;
-
-        @media (max-width: $small-breakpoint) {
-          font-size: 19px;
+        @media (min-width: $small-breakpoint) {
+          font-size: 24px;
+        }
+        @media (min-width: $medium-breakpoint) {
+          font-size: 34px;
         }
       }
 
       sub {
-        font-size: 16px;
+        font-size: 10px;
         font-style: italic;
-        @media (max-width: $small-breakpoint) {
-          font-size: 10px;
+        @media (min-width: $medium-breakpoint) {
+          font-size: 13px;
+        }
+        @media (min-width: $medium-breakpoint) {
+          font-size: 16px;
         }
       }
     }
 
     .right {
       a {
-        padding: 9px 16px;
+        padding: 3px 6px;
         border-radius: 3px;
-
-        @media (max-width: $small-breakpoint) {
-          font-size: 11px;
-          padding: 3px 6px;
+        font-size: 11px;
+        
+        @media (min-width: $small-breakpoint) {
+          font-size: 14px;
+          padding: 6px 11px;
+        }
+        @media (min-width: $medium-breakpoint) {
+          font-size: 16px;
+          padding: 9px 16px;
         }
 
         &:hover,
@@ -106,7 +120,7 @@ a {
   background-position: center;
   background-size: cover;
 
-  @media (max-width: $small-breakpoint) {
+  @media (max-width: $medium-breakpoint) {
     height: 300px;
   }
 }
@@ -117,14 +131,14 @@ a {
   padding-top: 50px;
   padding-bottom: 50px;
 
-  @media (max-width: $small-breakpoint) {
+  @media (max-width: $medium-breakpoint) {
     grid-template-columns: 1fr;
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
   .left {
-    @media (max-width: $small-breakpoint) {
+    @media (max-width: $medium-breakpoint) {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -133,7 +147,7 @@ a {
       border-radius: 50%;
       width: $profile-image-width;
 
-      @media (max-width: $small-breakpoint) {
+      @media (max-width: $medium-breakpoint) {
         width: $profile-image-width / 4;
         margin-top: 50px;
         margin-bottom: 20px;
@@ -143,7 +157,7 @@ a {
   
   .right {
     padding-left: 30px;
-    @media (max-width: $small-breakpoint) {
+    @media (max-width: $medium-breakpoint) {
       padding-left: initial;
     }
 
@@ -151,14 +165,14 @@ a {
       font-size: 32px;
       margin-top: 0;
       margin-bottom: 12px;
-      @media (max-width: $small-breakpoint) {
+      @media (max-width: $medium-breakpoint) {
         text-align: center;
         font-size: 28px;
       }
     }
 
     p {
-      @media (max-width: $small-breakpoint) {
+      @media (max-width: $medium-breakpoint) {
         font-size: 11px;
       }
     }
@@ -169,7 +183,7 @@ a {
   background-color: $primary;
   padding-top: 16px;
   padding-bottom: 16px;
-  @media (max-width: $small-breakpoint) {
+  @media (max-width: $medium-breakpoint) {
     font-size: 10px;
   }
   
